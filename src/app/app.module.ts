@@ -4,10 +4,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeCarouselComponent } from './components/home-carousel/home-carousel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeCarouselComponent
   ],
   imports: [
     BrowserModule,
