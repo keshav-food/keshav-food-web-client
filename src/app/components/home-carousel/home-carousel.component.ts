@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeCarouselService } from './HomeCarouselService';
 
 @Component({
   selector: 'app-home-carousel',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeCarouselComponent implements OnInit {
 
-  constructor() { }
+  promotionalImgs: string[];
+  errorMessage: string;
+
+  // constructor Injection
+  constructor(private homeCarouselService: HomeCarouselService) { }
+
 
   ngOnInit() {
+    console.log('noi');
+    this.homeCarouselService.getImages().subscribe(
+      pImages => {
+        this.promotionalImgs = pImages;
+      },
+      error => this.errorMessage = error as any
+    );
   }
 
 }

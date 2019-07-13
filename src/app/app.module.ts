@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeCarouselComponent } from './components/home-carousel/home-carousel.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,6 +13,7 @@ import { HomeCarouselComponent } from './components/home-carousel/home-carousel.
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot()
   ],
